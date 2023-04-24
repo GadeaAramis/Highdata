@@ -1,0 +1,14 @@
+<kendo-textbox 
+    [style.width.px]="300" 
+    placeholder="Type a student name" 
+    [clearButton]="true"
+    (valueChange)="onChange($event)" >
+
+</kendo-textbox>
+<kendo-grid [data]="view | async" [loading]="service.loading"
+    [height]="400"
+>
+    <kendo-grid-column field="name"></kendo-grid-column>
+    <kendo-grid-column field="age"></kendo-grid-column>
+    <kendo-grid-column field="hobbies"></kendo-grid-column>
+</kendo-grid>
